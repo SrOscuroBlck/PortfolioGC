@@ -1,0 +1,230 @@
+@font-face {
+    font-family: K2Dsemi;
+    src: url(../fonts/K2D-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: K2Dbold;
+    src: url(../fonts/K2D-ExtraBold.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "aside1 body aside2";
+    grid-template-rows: 18vh 100%;
+    grid-template-columns: 10% 78% 10%;
+    gap: 1%;
+    row-gap: 10px;
+}
+
+/* Header */
+.box1{
+    grid-area: header; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10vw;
+}
+.box1 .headerLogo {
+    float: left;
+}
+.box1 .headerLogo {
+    color: #66fcf1;
+}
+.box1 .headerLogo:hover {
+    color: #C5C6C8;
+}
+.box1 .headerBarra{
+    padding-top: 50px;
+}
+.box1 .headerBarra ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.box1 .hamb{
+    cursor: pointer;
+    float: right;
+}
+.sideBar {
+    display: none;
+}
+
+.box1 nav ul a {
+    font-family: K2Dsemi;
+    color: #C5C6C8;
+    text-decoration: underline;
+    text-decoration-color: #66fcf1;
+    text-underline-offset: 10px;
+    font-size: 200%;
+    padding-right: 20px;
+}
+.box1 nav ul a:visited {
+    font-family: K2Dsemi;
+    color:#C5C6C8;
+    text-decoration: none;
+}
+.box1 nav ul a:hover {
+    font-family: K2Dsemi;
+    color: #46A29F;
+    text-decoration: none;
+}
+.box1 nav ul a:hover, a:active {
+    font-family: K2Dsemi;
+    color: #46A29F;
+    text-decoration: none;
+}
+
+
+/* Aside 1 (Redes) */
+.box3{grid-area: aside1;}
+
+.box3 aside.redesLateralIzq ul{
+    position: fixed;
+    display: block;
+    list-style: none;
+    bottom: 3vw;
+    left: 3.5vw;
+}
+
+.box3 aside.redesLateralIzq ul li {
+    margin-top: 1vw;
+}
+
+/* Aside2 (correo) */
+.box4{grid-area: aside2;}
+
+.box4 aside.correoLateralDer a{
+    font-family: K2Dsemi;
+    font-size: 1.5vw;
+    color: #66fcf1;
+    text-decoration: none;
+    width: 10%;
+    position: fixed;
+    transform: rotate(-90deg);
+    bottom: 8vw;
+}
+
+
+/* Body de Home*/
+.box2{
+    grid-area: body;
+    display: flex;
+    justify-content: center;
+}
+
+.box2 .intro {
+    position: relative;
+    width: 70vw;
+    height: 36vh;
+    top: 18vh;
+}
+.box2 p {
+    color: #C5C6C8;
+    font-family: K2Dsemi;
+    font-size: 36px;
+    justify-content: center;
+}
+
+.box2 .parrafoUp {
+    margin: 0px;
+    padding: 0px;
+    font-size: 3vw;
+}
+
+.box2 .parrafoMid {
+    font-family: K2Dbold;
+    color: #46A29F;
+    font-size: 8.8vw;
+    text-align: left;
+    margin: 0px;
+    padding: 0%;
+    border: 0%;
+}
+
+.box2 .parrafoBott {
+    margin: 0px;
+    margin-top: 20px;
+    font-size: 3vw;
+    float: right;
+}
+
+/* Body de Sobre Mi */
+
+.box2-1 {
+    grid-area: body;
+    padding-top: 7vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+.box2-1 .textAboutMe {
+    width: 300px;
+    height: 400px;
+}
+
+.box2-1 .textAboutMe .bodyTexto {
+    font-family: K2Dsemi;
+    font-size: 118%;
+    color: #C5C6C8;
+}
+.box2-1 .imgAboutMe {
+    width: 300px;
+    height: 400px;
+    background-color: #C5C6C8;
+}
+
+.box2-1 .imgAboutMe .bodyFoto {
+    width: 300;
+    height: 400px;
+}
+
+/* Media Queries */
+
+/* Mobile */
+@media only screen and (max-width: 800px) {
+    .container {
+        grid-template-rows: 55vh 100%;
+    }
+    .box1 {
+        gap: 5vw;
+        padding-left: 30vw;
+        padding-right: 30vw;
+    }
+    .headerBarra ul li {
+        display: block;
+        padding-bottom: 2vw;
+    }
+    .headerBarra ul {
+        width: 221.5px;
+        align-items: center;
+    }
+    .box2 .parrafoMid {
+        font-size: 18vw;
+    }
+    .box2 .parrafoUp{
+        font-size: 3.5vw;
+    }
+    .box2 .parrafoBott  {
+        font-size: 3.5vw;
+    }
+
+}
+
