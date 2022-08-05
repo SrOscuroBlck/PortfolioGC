@@ -12,7 +12,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-image: url(../images/background.png);
+    background-image: url(images/background.png) ;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -32,6 +32,38 @@
     row-gap: 10px;
 }
 
+/* Animaciones */
+
+@keyframes fadeLeft {
+    0% {
+        opacity: 0%;
+        transform: translateX(-3vw);
+    }
+    100% {
+        opacity: 100%;
+    }
+    
+}
+@keyframes fadeRight {
+    0% {
+        opacity: 0%;
+        transform: translateX(3vw);
+    }
+    100% {
+        opacity: 100%;
+    }
+    
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+        transform: scale(1.1,1.1);
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 /* Header */
 .box1{
     grid-area: header; 
@@ -40,30 +72,30 @@
     justify-content: center;
     gap: 10vw;
 }
+
 .box1 .headerLogo {
-    float: left;
-}
-.box1 .headerLogo {
+    width: fit-content;
+    height: fit-content;
     color: #66fcf1;
+    animation-name: fadeLeft;
+    animation-duration: 1s;
 }
 .box1 .headerLogo:hover {
     color: #C5C6C8;
+    transform: scale(1.1,1.1);
+    transition: transform .8s;
 }
 .box1 .headerBarra{
     padding-top: 50px;
+    animation-name: fadeRight;
+    animation-duration: 1s;
 }
 .box1 .headerBarra ul li {
     list-style: none;
     display: inline-block;
 }
 
-.box1 .hamb{
-    cursor: pointer;
-    float: right;
-}
-.sideBar {
-    display: none;
-}
+
 
 .box1 nav ul a {
     font-family: K2Dsemi;
@@ -100,6 +132,8 @@
     list-style: none;
     bottom: 3vw;
     left: 3.5vw;
+    animation-name: fadeLeft;
+    animation-duration: 1s;
 }
 
 .box3 aside.redesLateralIzq ul li {
@@ -118,6 +152,8 @@
     position: fixed;
     transform: rotate(-90deg);
     bottom: 8vw;
+    animation-name: fadeRight;
+    animation-duration: 1s;
 }
 
 
@@ -145,6 +181,8 @@
     margin: 0px;
     padding: 0px;
     font-size: 3vw;
+    animation-name: fadeLeft;
+    animation-duration: 1s;
 }
 
 .box2 .parrafoMid {
@@ -155,6 +193,8 @@
     margin: 0px;
     padding: 0%;
     border: 0%;
+    animation-name: fadeIn;
+    animation-duration: 1s;
 }
 
 .box2 .parrafoBott {
@@ -162,6 +202,8 @@
     margin-top: 20px;
     font-size: 3vw;
     float: right;
+    animation-name: fadeRight;
+    animation-duration: 1s;
 }
 
 /* Body de Sobre Mi */
@@ -178,6 +220,8 @@
 .box2-1 .textAboutMe {
     width: 300px;
     height: 400px;
+    animation-name: fadeLeft;
+    animation-duration: 1s;
 }
 
 .box2-1 .textAboutMe .bodyTexto {
@@ -188,12 +232,22 @@
 .box2-1 .imgAboutMe {
     width: 300px;
     height: 400px;
-    background-color: #C5C6C8;
+    margin: 1px;
+    border: 0.2vw solid #C5C6C8;
+    animation-name: fadeRight;
+    animation-duration: 1s;
 }
 
 .box2-1 .imgAboutMe .bodyFoto {
     width: 300;
     height: 400px;
+    transform: translate(1vw,1vw);
+}
+
+.box2-1 .imgAboutMe .bodyFoto:hover {
+    transform: translate(1vw,1vw);
+    transform: scale(1.1,1.1);
+    transition: 1.5s;
 }
 
 /* Media Queries */
